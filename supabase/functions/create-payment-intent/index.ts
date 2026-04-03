@@ -5,21 +5,28 @@ const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') ?? '', {
   httpClient: Stripe.createFetchHttpClient(),
 });
 
+// Zero-decimal currencies — amount is already in the smallest unit (no cents)
+const ZERO_DECIMAL = new Set(['vnd', 'jpy', 'krw', 'bif', 'gnf', 'mga', 'pyg', 'rwf', 'ugx', 'xaf', 'xof']);
+
+// Minimum charge in smallest unit per currency
+function minimumAmount(currency: string): number {
+  return ZERO_DECIMAL.has(currency.toLowerCase()) ? 1000 : 50; // 1,000 VND | $0.50
+}
+
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
 Deno.serve(async (req) => {
-  // Handle CORS preflight
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
   }
 
   try {
-    const { amount, currency = 'usd', bookingRef } = await req.json();
+    const { amount, currency = 'vnd', bookingRef } = await req.json();
 
-    if (!amount || amount < 50) {
+    if (!amount || amount < minimumAmount(currency)) {
       return new Response(
         JSON.stringify({ error: 'Invalid amount' }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -27,8 +34,8 @@ Deno.serve(async (req) => {
     }
 
     const paymentIntent = await stripe.paymentIntents.create({
-      amount,           // in smallest currency unit (cents for USD)
-      currency,         // ready for multi-currency: 'usd', 'eur', 'vnd', etc.
+      amount,
+      currency,
       metadata: { bookingRef: bookingRef ?? '' },
       automatic_payment_methods: { enabled: true },
     });

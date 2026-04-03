@@ -86,6 +86,13 @@ export async function fetchTourBySlug(slug: string, lang: Lang = 'en') {
 
 // ─── Booking helpers ─────────────────────────────────────────────────────────
 
+function generateBookingRef(): string {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let ref = 'TT-';
+  for (let i = 0; i < 8; i++) ref += chars[Math.floor(Math.random() * chars.length)];
+  return ref;
+}
+
 export async function createBooking(booking: {
   tourId: string;
   guestName: string;
@@ -98,9 +105,12 @@ export async function createBooking(booking: {
   specialRequests?: string;
   userId?: string;
 }) {
-  const { data, error } = await supabase
+  const bookingRef = generateBookingRef();
+
+  const { error } = await supabase
     .from('bookings')
     .insert({
+      booking_ref: bookingRef,
       tour_id: booking.tourId,
       user_id: booking.userId ?? null,
       guest_name: booking.guestName,
@@ -112,29 +122,25 @@ export async function createBooking(booking: {
       total_price_vnd: booking.totalPriceVnd,
       special_requests: booking.specialRequests ?? null,
       status: 'pending',
-    })
-    .select()
-    .single();
+    });
   if (error) throw error;
 
-  // Map snake_case DB response → camelCase Booking type
   return {
-    id: data.id,
-    bookingRef: data.booking_ref,
-    tourId: data.tour_id,
-    userId: data.user_id,
-    guestName: data.guest_name,
-    guestEmail: data.guest_email,
-    guestPhone: data.guest_phone,
-    travelDate: data.travel_date,
-    numAdults: data.num_adults,
-    numChildren: data.num_children,
-    totalPriceVnd: Number(data.total_price_vnd),
-    status: data.status,
-    specialRequests: data.special_requests,
-    stripePaymentIntentId: data.stripe_payment_intent_id,
-    createdAt: data.created_at,
-    // keep tour name if joined
+    id: '',
+    bookingRef,
+    tourId: booking.tourId,
+    userId: booking.userId ?? null,
+    guestName: booking.guestName,
+    guestEmail: booking.guestEmail,
+    guestPhone: booking.guestPhone,
+    travelDate: booking.travelDate,
+    numAdults: booking.numAdults,
+    numChildren: booking.numChildren,
+    totalPriceVnd: booking.totalPriceVnd,
+    status: 'pending',
+    specialRequests: booking.specialRequests ?? null,
+    stripePaymentIntentId: null,
+    createdAt: new Date().toISOString(),
     tourName: booking.tourId,
   };
 }

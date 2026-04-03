@@ -1,10 +1,15 @@
-const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY') ?? '';
-const FROM_EMAIL = 'TT Tours <onboarding@resend.dev>'; // swap for your domain once verified
+const BREVO_API_KEY = Deno.env.get('BREVO_API_KEY') ?? '';
+const FROM_EMAIL = 'contact@tt-tours.online';
+const FROM_NAME = 'TT Tours';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
+
+function formatVnd(amount: number): string {
+  return Math.round(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' ₫';
+}
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -23,17 +28,17 @@ Deno.serve(async (req) => {
 
     const html = buildEmailHtml(booking, tourName);
 
-    const res = await fetch('https://api.resend.com/emails', {
+    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${RESEND_API_KEY}`,
+        'api-key': BREVO_API_KEY,
       },
       body: JSON.stringify({
-        from: FROM_EMAIL,
-        to: [booking.guestEmail],
+        sender: { name: FROM_NAME, email: FROM_EMAIL },
+        to: [{ email: booking.guestEmail, name: booking.guestName }],
         subject: `Booking Confirmed — ${tourName} · ${booking.bookingRef}`,
-        html,
+        htmlContent: html,
       }),
     });
 
@@ -56,6 +61,11 @@ Deno.serve(async (req) => {
 });
 
 function buildEmailHtml(booking: any, tourName: string): string {
+  const totalVnd = formatVnd(booking.totalPriceVnd ?? booking.total_price_vnd ?? 0);
+  const numAdults: number = booking.numAdults ?? booking.num_adults ?? 1;
+  const numChildren: number = booking.numChildren ?? booking.num_children ?? 0;
+  const guestsLabel = `${numAdults} adult${numAdults > 1 ? 's' : ''}${numChildren ? `, ${numChildren} child${numChildren > 1 ? 'ren' : ''}` : ''}`;
+
   return `<!DOCTYPE html>
 <html>
 <head>
@@ -118,11 +128,11 @@ function buildEmailHtml(booking: any, tourName: string): string {
           ${[
             ['Tour', tourName],
             ['Travel Date', booking.travelDate],
-            ['Guests', `${booking.numAdults} adult${booking.numAdults > 1 ? 's' : ''}${booking.numChildren ? `, ${booking.numChildren} child${booking.numChildren > 1 ? 'ren' : ''}` : ''}`],
+            ['Guests', guestsLabel],
             ['Name', booking.guestName],
             ['Email', booking.guestEmail],
             ['Phone', booking.guestPhone],
-            ['Total Paid', `$${Number(booking.totalPriceUsd).toFixed(2)} USD`],
+            ['Total Paid', totalVnd],
           ].map(([label, value]) => `
           <tr>
             <td style="padding:12px 20px;border-bottom:1px solid #F3F4F6;">
@@ -151,7 +161,7 @@ function buildEmailHtml(booking: any, tourName: string): string {
           <tr>
             <td align="center" style="padding-bottom:32px;">
               <p style="margin:0;font-size:13px;color:#6B7280;">Questions? Reply to this email or WhatsApp us any time.</p>
-              <p style="margin:4px 0 0;font-size:13px;color:#0B4C5C;font-weight:600;">bookings@tt-tours.com</p>
+              <p style="margin:4px 0 0;font-size:13px;color:#0B4C5C;font-weight:600;">contact@tt-tours.online</p>
             </td>
           </tr>
         </table>
@@ -165,7 +175,7 @@ function buildEmailHtml(booking: any, tourName: string): string {
     <tr><td style="height:4px;background:#F97316;"></td></tr>
     <tr>
       <td align="center" style="padding:20px;font-size:12px;color:rgba(255,255,255,0.4);">
-        © TT Tours · Hoi An, Vietnam
+        © TT Tours · Hoi An, Vietnam · <a href="https://tt-tours.online" style="color:#F97316;text-decoration:none;">tt-tours.online</a>
       </td>
     </tr>
   </table>

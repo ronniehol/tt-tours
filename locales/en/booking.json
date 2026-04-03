@@ -14,6 +14,7 @@
     "email": "Email Address",
     "phone": "Phone / WhatsApp",
     "travelDate": "Travel Date",
+    "selectDate": "Select a date",
     "adults": "Adults",
     "children": "Children (½ price)",
     "specialRequests": "Special Requests (optional)",

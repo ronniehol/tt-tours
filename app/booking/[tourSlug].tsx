@@ -18,6 +18,7 @@ import { z } from 'zod';
 import { useTranslation } from 'react-i18next';
 import { Colors } from '@/constants/theme';
 import { Button } from '@/components/ui/Button';
+import { DatePicker } from '@/components/ui/DatePicker';
 import { useBookingStore } from '@/store/booking-store';
 import { createBooking, fetchTourBySlug } from '@/lib/supabase';
 import { formatVnd } from '@/lib/format';
@@ -208,7 +209,9 @@ export default function BookingScreen() {
       setClientSecret(cs);
       setStep(2);
     } catch (err) {
-      showError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+      console.error('[Booking error]', err);
+      const msg = err instanceof Error ? err.message : String(err);
+      showError(msg || 'Something went wrong. Please try again.');
     } finally {
       setSubmitting(false);
       setStripeLoading(false);
@@ -329,10 +332,8 @@ export default function BookingScreen() {
 
             <Field label={t('form.travelDate')} error={errors.travelDate?.message}>
               <Controller control={control} name="travelDate"
-                render={({ field: { value, onChange, onBlur } }) => (
-                  <TextInput style={[styles.input, errors.travelDate && styles.inputError]}
-                    value={value} onChangeText={onChange} onBlur={onBlur}
-                    placeholder="YYYY-MM-DD" placeholderTextColor={Colors.muted} />
+                render={({ field: { value, onChange } }) => (
+                  <DatePicker value={value} onChange={onChange} hasError={!!errors.travelDate} placeholder={t('form.selectDate')} />
                 )} />
             </Field>
 

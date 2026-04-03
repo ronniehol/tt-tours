@@ -167,4 +167,7 @@ CREATE POLICY "Anyone can create a booking"
   ON bookings FOR INSERT
   WITH CHECK (true);
 
+GRANT INSERT ON bookings TO anon, authenticated;
+GRANT SELECT ON bookings TO anon, authenticated;
+
 -- Service role bypasses RLS for admin operations
