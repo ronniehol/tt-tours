@@ -1,0 +1,26 @@
+{
+  "header": "Hồ Sơ Của Tôi",
+  "traveller": "Du khách",
+  "menu": {
+    "myBookings": "Đặt chỗ của tôi",
+    "accountSettings": "Cài đặt tài khoản",
+    "supportChat": "Hỗ trợ",
+    "lookupBooking": "Tra cứu đặt chỗ",
+    "whatsapp": "Nhắn tin WhatsApp"
+  },
+  "signOut": "Đăng Xuất",
+  "guest": {
+    "headline": "Tham gia\ncuộc phiêu lưu",
+    "sub": "Đăng nhập để quản lý đặt chỗ, lưu yêu thích và nhận gợi ý cá nhân hóa.",
+    "signIn": "Đăng Nhập",
+    "createAccount": "Tạo Tài Khoản"
+  },
+  "language": {
+    "title": "Ngôn ngữ",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "ru": "Русский"
+  },
+  "appInfo": "TT Tours · Hội An, Việt Nam · v1.0.0"
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template 5 — Soft Editorial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Albert+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Albert Sans', sans-serif; background: #F9F7F4; color: #2C2520; }
+    .serif { font-family: 'Libre Baskerville', serif; }
+    :root {
+      --blush: #F2E8E0;
+      --rose: #D4857A;
+      --rose-dark: #A85A50;
+      --sage: #8A9B80;
+      --sage-light: #C4D0BA;
+      --slate: #8A8FA0;
+      --warm-white: #FAF8F5;
+      --ink: #2C2520;
+      --mist: #E8E4DC;
+    }
+
+    .tour-card {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .tour-card:hover { transform: translateY(-4px); }
+    .tour-card:hover .card-img { transform: scale(1.04); }
+    .card-img { transition: transform 0.5s ease; }
+
+    .btn-rose {
+      background: var(--rose);
+      color: white;
+      border-radius: 2px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      transition: background 0.2s;
+    }
+    .btn-rose:hover { background: var(--rose-dark); }
+    .btn-outline {
+      border: 1.5px solid var(--ink);
+      color: var(--ink);
+      border-radius: 2px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: var(--ink); color: white; }
+
+    .thumb-1 { background: linear-gradient(160deg, #A88060 0%, #C4A882 40%, #8A6A50 100%); }
+    .thumb-2 { background: linear-gradient(160deg, #7A9AA0 0%, #A0BCC0 40%, #5A7A82 100%); }
+    .thumb-3 { background: linear-gradient(160deg, #C09A7A 0%, #D4B890 40%, #9A7A5A 100%); }
+    .thumb-4 { background: linear-gradient(160deg, #8A9AB0 0%, #A0AABA 40%, #6A7A90 100%); }
+    .thumb-5 { background: linear-gradient(160deg, #B08880 0%, #C8A0A0 40%, #907060 100%); }
+    .thumb-6 { background: linear-gradient(160deg, #9AA88A 0%, #B4C2A0 40%, #7A8A6A 100%); }
+
+    .issue-line {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--slate);
+    }
+    .section-rule {
+      border-top: 1.5px solid var(--ink);
+      padding-top: 0.5rem;
+    }
+
+    nav { background: var(--warm-white); border-bottom: 1px solid var(--mist); }
+    .nav-link {
+      font-size: 0.78rem;
+      color: var(--slate);
+      transition: color 0.2s;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .nav-link:hover { color: var(--ink); }
+
+    /* Editorial grid helpers */
+    .grid-editorial {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.5rem;
+    }
+    .card-featured {
+      grid-row: span 2;
+    }
+    @media (max-width: 768px) {
+      .grid-editorial { grid-template-columns: 1fr; }
+      .card-featured { grid-row: span 1; }
+    }
+
+    .deco-number {
+      font-size: 7rem;
+      font-weight: 700;
+      color: var(--mist);
+      line-height: 1;
+      font-family: 'Libre Baskerville', serif;
+      position: absolute;
+      top: -1rem;
+      right: 1rem;
+    }
+    .tag-chip {
+      background: var(--blush);
+      color: var(--rose-dark);
+      border-radius: 2px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Top band: issue / branding -->
+      <div class="flex items-center justify-between py-2 border-b border-gray-200">
+        <span class="issue-line">Hoi An · Da Nang · Vietnam</span>
+        <div class="serif text-xl font-bold tracking-tight" style="color: var(--ink);">TT<em style="color: var(--rose);">·</em>TOURS</div>
+        <span class="issue-line">Est. Hoi An 2010</span>
+      </div>
+      <!-- Main nav -->
+      <div class="flex items-center justify-between h-11">
+        <div class="flex items-center gap-6">
+          <a href="#" class="nav-link">Tours</a>
+          <a href="#" class="nav-link">Transport</a>
+          <a href="#" class="nav-link">Gallery</a>
+          <a href="#" class="nav-link">About</a>
+        </div>
+        <a href="#" class="btn-rose px-5 py-2">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-24 pb-0 overflow-hidden" style="background: var(--warm-white);">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Issue header -->
+      <div class="flex items-center gap-4 pt-8 mb-8">
+        <div class="w-12 h-px" style="background: var(--rose);"></div>
+        <span class="issue-line">Spring Collection · 14 Curated Tours</span>
+        <div class="flex-1 h-px" style="background: var(--mist);"></div>
+        <span class="issue-line">Daily Departures</span>
+      </div>
+
+      <!-- Hero grid -->
+      <div class="grid lg:grid-cols-12 gap-6 items-end">
+        <!-- Main headline col -->
+        <div class="lg:col-span-5">
+          <p class="issue-line mb-4">Featured Destination</p>
+          <h1 class="serif mb-4" style="font-size: clamp(2.5rem, 5vw, 4.2rem); line-height: 1.15; color: var(--ink);">
+            Journey into<br />
+            <em style="color: var(--rose);">the Heart</em><br />
+            of Vietnam
+          </h1>
+          <p class="text-sm leading-relaxed mb-6" style="color: var(--slate); max-width: 340px; line-height: 1.8;">
+            A carefully edited collection of Central Vietnam's most remarkable tours — from ancient Cham sanctuaries to cloud-level bridges and coral-rich seas.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="btn-rose px-8 py-3">Browse Tours</a>
+            <a href="#" class="btn-outline px-8 py-3">View Schedule</a>
+          </div>
+          <!-- Stats in editorial style -->
+          <div class="flex gap-8 mt-8 pt-6" style="border-top: 1px solid var(--mist);">
+            <div>
+              <p class="serif text-3xl" style="color: var(--ink);">14</p>
+              <p class="issue-line mt-1">Experiences</p>
+            </div>
+            <div style="border-left: 1px solid var(--mist);" class="pl-8">
+              <p class="serif text-3xl" style="color: var(--ink);">5★</p>
+              <p class="issue-line mt-1">Avg Rating</p>
+            </div>
+            <div style="border-left: 1px solid var(--mist);" class="pl-8">
+              <p class="serif text-3xl" style="color: var(--rose);">∞</p>
+              <p class="issue-line mt-1">Memories</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero image col (tall) -->
+        <div class="lg:col-span-4 relative">
+          <div class="relative overflow-hidden rounded-sm" style="aspect-ratio: 3/4; background: linear-gradient(160deg, #A88060 0%, #C4A882 35%, #8A6A50 60%, #6A8A7A 100%);">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <!-- Overlay caption -->
+            <div class="absolute bottom-0 left-0 right-0 p-5" style="background: linear-gradient(to top, rgba(44,37,32,0.8), transparent);">
+              <p class="issue-line text-white/60 mb-1">Cover Story</p>
+              <p class="serif text-white text-sm">My Son Sanctuary · Hidden Temples of the Cham Kingdom</p>
+            </div>
+            <!-- Corner tag -->
+            <div class="absolute top-4 right-4 bg-white px-3 py-1.5">
+              <p class="issue-line" style="color: var(--rose-dark);">from $22</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: secondary items -->
+        <div class="lg:col-span-3 flex flex-col gap-4">
+          <div class="rounded-sm overflow-hidden" style="background: var(--blush);">
+            <div class="aspect-video relative overflow-hidden">
+              <div class="card-img absolute inset-0 thumb-2"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-4">
+              <span class="tag-chip">Full Day</span>
+              <p class="serif text-sm mt-2 font-bold">Ba Na Hill</p>
+              <p class="text-xs text-gray-400 mt-1">from $50</p>
+            </div>
+          </div>
+
+          <div class="rounded-sm overflow-hidden" style="background: var(--sage-light);">
+            <div class="aspect-video relative overflow-hidden">
+              <div class="card-img absolute inset-0 thumb-3"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-4">
+              <span class="tag-chip">Full Day</span>
+              <p class="serif text-sm mt-2 font-bold">Cham Island</p>
+              <p class="text-xs text-gray-400 mt-1">from $38</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider with text -->
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex items-center gap-4">
+      <div class="flex-1 h-px" style="background: var(--mist);"></div>
+      <span class="issue-line">This Season's Curated Selection</span>
+      <div class="flex-1 h-px" style="background: var(--mist);"></div>
+    </div>
+  </div>
+
+  <!-- Tour Cards — Editorial Grid -->
+  <section style="background: var(--warm-white); padding-bottom: 5rem;">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="section-rule flex justify-between items-baseline mb-8">
+        <h2 class="serif text-2xl">All Experiences</h2>
+        <a href="#" class="issue-line hover:underline">View full collection →</a>
+      </div>
+
+      <!-- Featured card + grid -->
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Featured large card -->
+        <div class="tour-card md:row-span-2 flex flex-col">
+          <div class="relative overflow-hidden rounded-sm flex-none" style="aspect-ratio: 3/4;">
+            <div class="card-img absolute inset-0 thumb-4"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <div class="bg-white/95 p-4 rounded-sm">
+                <span class="tag-chip">Full Day</span>
+                <h3 class="serif text-base font-bold mt-2 mb-1">Hue City Tour</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">Imperial citadel, royal tombs &amp; the scenic Hai Van Pass — Vietnam's most historic journey.</p>
+                <div class="flex items-center justify-between mt-3">
+                  <span class="text-sm font-semibold" style="color: var(--rose);">from $40</span>
+                  <a href="#" class="issue-line hover:underline" style="color: var(--rose-dark);">Book →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Small cards -->
+        <div class="tour-card">
+          <div class="relative overflow-hidden rounded-sm" style="aspect-ratio: 16/9;">
+            <div class="card-img absolute inset-0 thumb-5"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <div class="absolute top-3 left-3"><span class="tag-chip">Half Day</span></div>
+          </div>
+          <div class="pt-3">
+            <div class="flex justify-between items-start">
+              <h3 class="serif text-sm font-bold">Vespa Tour</h3>
+              <span class="text-xs font-semibold" style="color: var(--rose);">$28+</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Street food and back-alley culture aboard a vintage Vespa.</p>
+          </div>
+        </div>
+
+        <div class="tour-card">
+          <div class="relative overflow-hidden rounded-sm" style="aspect-ratio: 16/9;">
+            <div class="card-img absolute inset-0 thumb-6"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <div class="absolute top-3 left-3"><span class="tag-chip">Half Day</span></div>
+          </div>
+          <div class="pt-3">
+            <div class="flex justify-between items-start">
+              <h3 class="serif text-sm font-bold">Basket Boat Tour</h3>
+              <span class="text-xs font-semibold" style="color: var(--rose);">$15+</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Traditional round boats through the palm waterways of Cam Thanh.</p>
+          </div>
+        </div>
+
+        <div class="tour-card">
+          <div class="relative overflow-hidden rounded-sm" style="aspect-ratio: 16/9;">
+            <div class="card-img absolute inset-0 thumb-1"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <div class="absolute top-3 left-3"><span class="tag-chip">Half Day</span></div>
+          </div>
+          <div class="pt-3">
+            <div class="flex justify-between items-start">
+              <h3 class="serif text-sm font-bold">Hoi An Bike Tour</h3>
+              <span class="text-xs font-semibold" style="color: var(--rose);">$18+</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Cycle through rice paddies and riverside villages at a gentle pace.</p>
+          </div>
+        </div>
+
+        <div class="tour-card">
+          <div class="relative overflow-hidden rounded-sm" style="aspect-ratio: 16/9;">
+            <div class="card-img absolute inset-0 thumb-2"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <div class="absolute top-3 left-3"><span class="tag-chip">Half Day</span></div>
+          </div>
+          <div class="pt-3">
+            <div class="flex justify-between items-start">
+              <h3 class="serif text-sm font-bold">Diving Tour</h3>
+              <span class="text-xs font-semibold" style="color: var(--rose);">$48+</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">PADI-certified diving in the reefs of the South China Sea.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pull quote CTA section -->
+  <section style="background: var(--blush); padding: 5rem 0;">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <div class="w-8 h-px" style="background: var(--rose);"></div>
+        <span class="issue-line">Ready to Travel?</span>
+        <div class="w-8 h-px" style="background: var(--rose);"></div>
+      </div>
+      <p class="serif mb-4" style="font-size: clamp(1.8rem, 4vw, 3.2rem); line-height: 1.3; color: var(--ink);">
+        <em>"The world is a book —<br />those who do not travel<br />read only one page."</em>
+      </p>
+      <p class="issue-line mb-8" style="color: var(--slate);">Daily departures · Small groups · Expert local guides</p>
+      <a href="#" class="btn-rose inline-block px-12 py-4 text-sm">Reserve Your Experience</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--ink); padding: 2.5rem 0;">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="serif text-lg font-bold" style="color: var(--blush);">TT<em style="color: var(--rose);">·</em>TOURS</div>
+        <span class="text-xs" style="color: rgba(255,255,255,0.25);">© 2025 TT Tours · Hoi An, Vietnam</span>
+        <div class="flex gap-6">
+          <a href="#" class="text-xs hover:text-white transition-colors" style="color: rgba(255,255,255,0.3);">WhatsApp</a>
+          <a href="#" class="text-xs hover:text-white transition-colors" style="color: rgba(255,255,255,0.3);">Privacy</a>
+          <a href="#" class="text-xs hover:text-white transition-colors" style="color: rgba(255,255,255,0.3);">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

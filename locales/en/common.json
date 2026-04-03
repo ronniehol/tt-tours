@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "home": "Home",
+    "tours": "Tours",
+    "bookings": "Bookings",
+    "profile": "Me"
+  },
+  "actions": {
+    "back": "← Back",
+    "close": "✕",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "signUp": "Sign Up",
+    "loading": "Loading…",
+    "tryAgain": "Try Again",
+    "browseTours": "Browse Tours",
+    "backToHome": "Back to Home"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "notFound": "Not found."
+  }
+}

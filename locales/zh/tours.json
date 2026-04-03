@@ -1,0 +1,19 @@
+{
+  "header": {
+    "title": "全部旅游",
+    "count": "{{count}} 条线路"
+  },
+  "categories": {
+    "all": "全部",
+    "cultural": "文化",
+    "adventure": "探险",
+    "water": "水上",
+    "nature": "自然",
+    "food": "美食"
+  },
+  "card": {
+    "fullDay": "全天",
+    "halfDay": "半天",
+    "maxGroup": "最多 {{count}} 人"
+  }
+}

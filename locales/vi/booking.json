@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "Đặt Tour",
+    "notFound": "Không tìm thấy tour."
+  },
+  "steps": {
+    "details": "Thông tin",
+    "review": "Xem lại",
+    "payment": "Thanh toán"
+  },
+  "form": {
+    "title": "Thông Tin Của Bạn",
+    "fullName": "Họ và tên",
+    "email": "Địa chỉ email",
+    "phone": "Điện thoại / WhatsApp",
+    "travelDate": "Ngày đi",
+    "adults": "Người lớn",
+    "children": "Trẻ em (½ giá)",
+    "specialRequests": "Yêu cầu đặc biệt (tùy chọn)",
+    "specialRequestsPlaceholder": "Chế độ ăn, nhu cầu đặc biệt…",
+    "continueToReview": "Tiếp tục xem lại"
+  },
+  "review": {
+    "title": "Xem Lại & Xác Nhận",
+    "tour": "Tour",
+    "date": "Ngày",
+    "guests": "Khách",
+    "name": "Tên",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "total": "Tổng cộng",
+    "adults": "{{count}} người lớn",
+    "adults_plural": "{{count}} người lớn",
+    "children": "{{count}} trẻ em",
+    "children_plural": "{{count}} trẻ em",
+    "proceedToPayment": "Tiến hành thanh toán",
+    "editDetails": "Chỉnh sửa thông tin"
+  },
+  "payment": {
+    "title": "Thanh Toán",
+    "sub": "Thanh toán an toàn qua Stripe. Thông tin thẻ không được lưu trên máy chủ của chúng tôi.",
+    "totalDue": "Tổng thanh toán",
+    "pay": "Thanh toán ${{amount}}",
+    "processing": "Đang xử lý…",
+    "secure": "🔒 SSL 256-bit · Powered by Stripe",
+    "mobileFallback": "Thanh toán di động sắp ra mắt. Vui lòng hoàn tất đặt chỗ trên web."
+  },
+  "confirmation": {
+    "title": "Đặt Chỗ\nThành Công!",
+    "emailSent": "Email xác nhận đã được gửi đến {{email}}. Chúng tôi sẽ liên hệ trước 24 giờ trước khi khởi hành.",
+    "reference": "Mã đặt chỗ",
+    "tour": "Tour",
+    "date": "Ngày đi",
+    "guests": "Khách",
+    "name": "Tên",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "totalPaid": "Tổng đã thanh toán",
+    "adults": "{{count}} người lớn",
+    "adults_plural": "{{count}} người lớn",
+    "children": "{{count}} trẻ em",
+    "children_plural": "{{count}} trẻ em",
+    "whatNext": "Tiếp theo là gì",
+    "step1": "📧 Kiểm tra email để nhận xác nhận đặt chỗ đầy đủ.",
+    "step2": "📞 Chúng tôi sẽ gọi hoặc nhắn WhatsApp trước 24 giờ.",
+    "step3": "📍 Hướng dẫn viên sẽ đón bạn tại điểm hẹn.",
+    "step4": "🌟 Tận hưởng chuyến đi — và hãy để lại đánh giá nhé!",
+    "backToHome": "Về trang chủ",
+    "bookAnother": "Đặt tour khác",
+    "noBooking": "Không có đặt chỗ nào. Hãy quay lại xem các tour."
+  }
+}

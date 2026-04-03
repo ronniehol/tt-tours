@@ -1,0 +1,35 @@
+{
+  "header": "My Bookings",
+  "lookup": {
+    "title": "Look up a booking",
+    "sub": "Enter your booking reference (e.g. TT-A1B2C3D4) to check status.",
+    "placeholder": "TT-XXXXXXXX",
+    "button": "Look up",
+    "notFound": "No booking found for that reference. Please check and try again."
+  },
+  "status": {
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "cancelled": "Cancelled",
+    "completed": "Completed"
+  },
+  "labels": {
+    "bookingReference": "Booking Reference",
+    "tour": "Tour",
+    "name": "Name",
+    "email": "Email",
+    "date": "Date",
+    "guests": "Guests",
+    "total": "Total",
+    "adults": "{{count}} adult",
+    "adults_plural": "{{count}} adults",
+    "children": "{{count}} child",
+    "children_plural": "{{count}} children"
+  },
+  "confirmedNote": "✓ Your booking is confirmed. We'll contact you 24hrs before departure with pickup details.",
+  "promo": {
+    "title": "Plan Your\nNext Adventure",
+    "sub": "14 tours available · Daily departures",
+    "button": "Browse Tours"
+  }
+}

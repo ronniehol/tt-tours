@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "tours": "Tour",
+    "bookings": "Đặt chỗ",
+    "profile": "Hồ sơ"
+  },
+  "actions": {
+    "back": "Quay lại",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận",
+    "save": "Lưu",
+    "close": "Đóng"
+  },
+  "errors": {
+    "generic": "Đã xảy ra lỗi. Vui lòng thử lại.",
+    "network": "Lỗi mạng. Vui lòng kiểm tra kết nối."
+  }
+}

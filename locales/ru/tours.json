@@ -1,0 +1,19 @@
+{
+  "header": {
+    "title": "Все туры",
+    "count": "{{count}} туров"
+  },
+  "categories": {
+    "all": "Все",
+    "cultural": "Культура",
+    "adventure": "Приключения",
+    "water": "Водные",
+    "nature": "Природа",
+    "food": "Еда"
+  },
+  "card": {
+    "fullDay": "Весь день",
+    "halfDay": "Полдня",
+    "maxGroup": "Макс. {{count}}"
+  }
+}

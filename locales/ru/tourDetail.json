@@ -1,0 +1,26 @@
+{
+  "labels": {
+    "fullDay": "Весь день",
+    "halfDay": "Полдня",
+    "departure": "Отправление",
+    "maxGroup": "Макс. {{count}}",
+    "duration": "Продолжительность",
+    "from": "От",
+    "perPerson": "за человека",
+    "meetingPoint": "Место встречи"
+  },
+  "sections": {
+    "about": "О туре",
+    "highlights": "Основные впечатления",
+    "whatsIncluded": "Что включено",
+    "included": "✓ Включено",
+    "notIncluded": "✗ Не включено",
+    "meetingPoint": "Место встречи"
+  },
+  "cta": {
+    "book": "Забронировать тур",
+    "bookNow": "Забронировать",
+    "notFound": "Тур не найден.",
+    "backToTours": "Назад к турам"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "header": {
+    "title": "All Tours",
+    "count": "{{count}} tours"
+  },
+  "categories": {
+    "all": "All",
+    "cultural": "Cultural",
+    "adventure": "Adventure",
+    "water": "Water",
+    "nature": "Nature",
+    "food": "Food"
+  },
+  "card": {
+    "fullDay": "Full Day",
+    "halfDay": "Half Day",
+    "maxGroup": "Max {{count}}"
+  }
+}

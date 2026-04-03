@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "home": "首页",
+    "tours": "旅游",
+    "bookings": "预订",
+    "profile": "我的"
+  },
+  "actions": {
+    "back": "返回",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "close": "关闭"
+  },
+  "errors": {
+    "generic": "出现错误，请重试。",
+    "network": "网络错误，请检查连接。"
+  }
+}

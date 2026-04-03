@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template 2 — Dark Luxury</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Jost', sans-serif; background: #0D0D0D; color: #E8DCC8; }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+    :root { --gold: #C9A84C; --gold-light: #E8C97A; --dark: #0D0D0D; --dark-2: #161616; --dark-3: #1E1E1E; }
+    .gold { color: var(--gold); }
+    .bg-dark-2 { background: var(--dark-2); }
+    .bg-dark-3 { background: var(--dark-3); }
+    .border-gold { border-color: var(--gold); }
+
+    .tour-card {
+      background: var(--dark-2);
+      border: 1px solid #2A2A2A;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .tour-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #C9A84C, #E8C97A);
+      color: #0D0D0D;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      transition: opacity 0.2s;
+    }
+    .btn-gold:hover { opacity: 0.85; }
+    .btn-outline-gold {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      transition: all 0.2s;
+    }
+    .btn-outline-gold:hover { background: var(--gold); color: #0D0D0D; }
+
+    .divider-gold { background: linear-gradient(90deg, transparent, var(--gold), transparent); height: 1px; }
+
+    .thumb-1 { background: linear-gradient(135deg, #3D2B1A 0%, #6B4E2A 40%, #2A1E0F 100%); }
+    .thumb-2 { background: linear-gradient(135deg, #1A2B3D 0%, #2A4E6B 40%, #0F1E2A 100%); }
+    .thumb-3 { background: linear-gradient(135deg, #2B3D1A 0%, #4E6B2A 40%, #1E2A0F 100%); }
+    .thumb-4 { background: linear-gradient(135deg, #3D1A2B 0%, #6B2A4E 40%, #2A0F1E 100%); }
+    .thumb-5 { background: linear-gradient(135deg, #1A3D2B 0%, #2A6B4E 40%, #0F2A1E 100%); }
+    .thumb-6 { background: linear-gradient(135deg, #3D3D1A 0%, #6B6B2A 40%, #2A2A0F 100%); }
+
+    .nav-link { color: #8A8070; transition: color 0.2s; letter-spacing: 0.1em; font-size: 0.75rem; text-transform: uppercase; }
+    .nav-link:hover { color: var(--gold); }
+
+    .ornament { font-size: 1.2rem; color: var(--gold); opacity: 0.6; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav style="background: rgba(13,13,13,0.95); border-bottom: 1px solid #1E1E1E;" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-8 h-18 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 flex items-center justify-center" style="border: 1px solid var(--gold);">
+          <span style="color: var(--gold); font-size: 10px;">✦</span>
+        </div>
+        <div>
+          <span class="serif text-lg tracking-widest" style="color: #E8DCC8;">TT TOURS</span>
+          <span class="text-xs ml-2" style="color: #5A5040; letter-spacing: 0.2em;">HOI AN</span>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-10">
+        <a href="#" class="nav-link">Experiences</a>
+        <a href="#" class="nav-link">Transport</a>
+        <a href="#" class="nav-link">Gallery</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+      <a href="#" class="btn-gold text-xs uppercase px-6 py-3">Reserve Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center pt-18" style="background: linear-gradient(135deg, #0D0D0D 0%, #161208 50%, #0D0D0D 100%);">
+    <!-- Background texture -->
+    <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%); background-size: 30px 30px;"></div>
+    <!-- Side accent -->
+    <div class="absolute left-0 top-0 bottom-0 w-1" style="background: linear-gradient(180deg, transparent, var(--gold), transparent);"></div>
+
+    <div class="relative max-w-7xl mx-auto px-8 py-28">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="divider-gold w-12"></div>
+          <span class="text-xs uppercase tracking-[0.4em]" style="color: var(--gold);">Est. Hoi An, Vietnam</span>
+          <div class="divider-gold w-12"></div>
+        </div>
+
+        <h1 class="serif mb-6" style="font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.05; font-weight: 300; color: #E8DCC8;">
+          Where Ancient<br />
+          <em style="color: var(--gold);">Kingdoms</em> Meet<br />
+          Modern Luxury
+        </h1>
+
+        <p class="mb-10 text-base leading-relaxed" style="color: #6A6050; max-width: 480px; font-weight: 300;">
+          Exclusive guided journeys through Vietnam's most sacred and spectacular destinations. From UNESCO sanctuaries to mountain-top panoramas.
+        </p>
+
+        <div class="flex items-center gap-4">
+          <a href="#" class="btn-gold text-sm uppercase px-10 py-4 tracking-widest">Explore Tours</a>
+          <a href="#" class="btn-outline-gold text-sm uppercase px-10 py-4 tracking-widest">View Schedule</a>
+        </div>
+
+        <div class="mt-16 grid grid-cols-3 gap-6" style="border-top: 1px solid #1E1E1E; padding-top: 2rem;">
+          <div>
+            <p class="serif text-4xl" style="color: var(--gold);">14</p>
+            <div class="divider-gold w-8 my-2"></div>
+            <p class="text-xs uppercase tracking-widest" style="color: #5A5040;">Premium Tours</p>
+          </div>
+          <div>
+            <p class="serif text-4xl" style="color: var(--gold);">7am</p>
+            <div class="divider-gold w-8 my-2"></div>
+            <p class="text-xs uppercase tracking-widest" style="color: #5A5040;">Daily Departs</p>
+          </div>
+          <div>
+            <p class="serif text-4xl" style="color: var(--gold);">5★</p>
+            <div class="divider-gold w-8 my-2"></div>
+            <p class="text-xs uppercase tracking-widest" style="color: #5A5040;">Guest Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right decorative element -->
+    <div class="absolute right-8 top-1/2 -translate-y-1/2 hidden xl:block">
+      <div class="w-px h-48 mx-auto" style="background: linear-gradient(180deg, transparent, var(--gold), transparent);"></div>
+      <div class="text-center my-4">
+        <span class="serif text-xs tracking-[0.5em] uppercase" style="color: var(--gold); writing-mode: vertical-rl; transform: rotate(180deg);">Premium Experience</span>
+      </div>
+      <div class="w-px h-48 mx-auto" style="background: linear-gradient(180deg, transparent, var(--gold), transparent);"></div>
+    </div>
+  </section>
+
+  <!-- Section divider -->
+  <div class="divider-gold"></div>
+
+  <!-- Tour Cards -->
+  <section class="max-w-7xl mx-auto px-8 py-24">
+    <div class="text-center mb-16">
+      <span class="ornament">✦</span>
+      <p class="text-xs uppercase tracking-[0.5em] mt-4 mb-3" style="color: var(--gold);">Curated Experiences</p>
+      <h2 class="serif text-5xl font-light" style="color: #E8DCC8;">Our Signature Tours</h2>
+      <div class="divider-gold w-24 mx-auto mt-6"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="tour-card cursor-pointer">
+        <div class="thumb-1 aspect-[16/10] relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="text-xs uppercase tracking-widest px-3 py-1" style="border: 1px solid var(--gold); color: var(--gold);">Half Day</span>
+          </div>
+          <div class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center" style="border: 1px solid rgba(201,168,76,0.4);">
+            <span style="color: var(--gold); font-size: 12px;">✦</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-3">
+            <h3 class="serif text-xl font-light" style="color: #E8DCC8;">My Son Sanctuary</h3>
+            <span class="text-sm" style="color: var(--gold);">from $22</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-4" style="color: #6A6050;">Ancient Cham temples hidden in a sacred forested valley. A UNESCO World Heritage site of extraordinary mystique.</p>
+          <a href="#" class="text-xs uppercase tracking-widest" style="color: var(--gold);">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="tour-card cursor-pointer">
+        <div class="thumb-2 aspect-[16/10] relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="text-xs uppercase tracking-widest px-3 py-1" style="border: 1px solid var(--gold); color: var(--gold);">Full Day</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-3">
+            <h3 class="serif text-xl font-light" style="color: #E8DCC8;">Ba Na Hill</h3>
+            <span class="text-sm" style="color: var(--gold);">from $50</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-4" style="color: #6A6050;">The legendary Golden Bridge cradled by stone hands. Ride the world's longest cable car above the clouds.</p>
+          <a href="#" class="text-xs uppercase tracking-widest" style="color: var(--gold);">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="tour-card cursor-pointer">
+        <div class="thumb-3 aspect-[16/10] relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="text-xs uppercase tracking-widest px-3 py-1" style="border: 1px solid var(--gold); color: var(--gold);">Full Day</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-3">
+            <h3 class="serif text-xl font-light" style="color: #E8DCC8;">Cham Island</h3>
+            <span class="text-sm" style="color: var(--gold);">from $38</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-4" style="color: #6A6050;">Pristine coral reefs and turquoise waters. Snorkelling and swimming in a UNESCO Biosphere Reserve.</p>
+          <a href="#" class="text-xs uppercase tracking-widest" style="color: var(--gold);">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="tour-card cursor-pointer">
+        <div class="thumb-4 aspect-[16/10] relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="text-xs uppercase tracking-widest px-3 py-1" style="border: 1px solid var(--gold); color: var(--gold);">Full Day</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-3">
+            <h3 class="serif text-xl font-light" style="color: #E8DCC8;">Hue City Tour</h3>
+            <span class="text-sm" style="color: var(--gold);">from $40</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-4" style="color: #6A6050;">Imperial citadel, royal tombs and the dramatic Hai Van Pass with panoramic coastal vistas.</p>
+          <a href="#" class="text-xs uppercase tracking-widest" style="color: var(--gold);">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="tour-card cursor-pointer">
+        <div class="thumb-5 aspect-[16/10] relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="text-xs uppercase tracking-widest px-3 py-1" style="border: 1px solid var(--gold); color: var(--gold);">Evening</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-3">
+            <h3 class="serif text-xl font-light" style="color: #E8DCC8;">Vespa Night Tour</h3>
+            <span class="text-sm" style="color: var(--gold);">from $28</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-4" style="color: #6A6050;">Experience Hoi An's lantern-lit streets and local street food scene aboard a classic Vespa.</p>
+          <a href="#" class="text-xs uppercase tracking-widest" style="color: var(--gold);">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="tour-card cursor-pointer">
+        <div class="thumb-6 aspect-[16/10] relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="text-xs uppercase tracking-widest px-3 py-1" style="border: 1px solid var(--gold); color: var(--gold);">Half Day</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-3">
+            <h3 class="serif text-xl font-light" style="color: #E8DCC8;">Diving Tour</h3>
+            <span class="text-sm" style="color: var(--gold);">from $48</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-4" style="color: #6A6050;">Discover the vibrant underwater world of the South China Sea with certified PADI instructors.</p>
+          <a href="#" class="text-xs uppercase tracking-widest" style="color: var(--gold);">Learn More →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="divider-gold"></div>
+
+  <!-- CTA -->
+  <section class="py-24" style="background: linear-gradient(135deg, #0D0D0D 0%, #161208 50%, #0D0D0D 100%);">
+    <div class="max-w-3xl mx-auto text-center px-8">
+      <span class="ornament text-2xl">✦</span>
+      <h2 class="serif text-5xl font-light mt-4 mb-4" style="color: #E8DCC8;">Begin Your Journey</h2>
+      <p class="mb-10 text-sm leading-loose tracking-wider uppercase" style="color: #5A5040;">Daily Departures · Small Private Groups · Expert Local Guides</p>
+      <a href="#" class="btn-gold text-sm uppercase px-14 py-5 tracking-[0.2em] inline-block">Reserve Your Experience</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid #1E1E1E; padding: 2rem 0;">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="serif text-sm" style="color: #3A3020;">© 2025 TT Tours · Hoi An, Vietnam</span>
+      <div class="flex gap-8">
+        <a href="#" class="text-xs uppercase tracking-widest" style="color: #3A3020;">WhatsApp</a>
+        <a href="#" class="text-xs uppercase tracking-widest" style="color: #3A3020;">Privacy</a>
+        <a href="#" class="text-xs uppercase tracking-widest" style="color: #3A3020;">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

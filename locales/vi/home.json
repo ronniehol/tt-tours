@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "HỘI AN, VIỆT NAM",
+    "headline1": "KHÁM PHÁ",
+    "headline2": "HỘI AN",
+    "headline3": "CÙNG CHÚNG TÔI",
+    "sub": "Tour trọn gói từ phố cổ đến đảo Cù Lao Chàm — mỗi ngày xuất phát.",
+    "cta1": "Xem Tour",
+    "cta2": "Tìm hiểu thêm"
+  },
+  "stats": {
+    "tours": "Tour",
+    "departures": "Xuất phát",
+    "departures_value": "Hàng ngày",
+    "rated": "Đánh giá"
+  },
+  "steps": {
+    "title1": "Chọn Tour",
+    "sub1": "Duyệt qua 14+ tour được tuyển chọn kỹ lưỡng.",
+    "title2": "Đặt Chỗ",
+    "sub2": "Điền thông tin và thanh toán an toàn trực tuyến.",
+    "title3": "Trải Nghiệm",
+    "sub3": "Hướng dẫn viên đón bạn và bắt đầu cuộc phiêu lưu!"
+  },
+  "featured": {
+    "eyebrow": "NỔI BẬT",
+    "title": "TOUR PHỔ BIẾN",
+    "viewAll": "Xem tất cả →"
+  },
+  "cta": {
+    "headline": "SẴN SÀNG CHO CUỘC PHIÊU LƯU?",
+    "sub": "ĐẶT NGAY HÔM NAY · XUẤT PHÁT HÀNG NGÀY",
+    "button": "Xem Tất Cả Tour"
+  }
+}

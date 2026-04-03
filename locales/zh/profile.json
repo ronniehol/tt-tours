@@ -1,0 +1,26 @@
+{
+  "header": "我的资料",
+  "traveller": "旅行者",
+  "menu": {
+    "myBookings": "我的预订",
+    "accountSettings": "账号设置",
+    "supportChat": "客服支持",
+    "lookupBooking": "查询预订",
+    "whatsapp": "WhatsApp 联系我们"
+  },
+  "signOut": "退出登录",
+  "guest": {
+    "headline": "加入\n冒险之旅",
+    "sub": "登录以管理预订、保存收藏并获得个性化推荐。",
+    "signIn": "登录",
+    "createAccount": "创建账号"
+  },
+  "language": {
+    "title": "语言",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "ru": "Русский"
+  },
+  "appInfo": "TT Tours · 越南会安 · v1.0.0"
+}

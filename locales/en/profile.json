@@ -1,0 +1,26 @@
+{
+  "header": "My Profile",
+  "traveller": "Traveller",
+  "menu": {
+    "myBookings": "My Bookings",
+    "accountSettings": "Account Settings",
+    "supportChat": "Support Chat",
+    "lookupBooking": "Look up a booking",
+    "whatsapp": "WhatsApp us"
+  },
+  "signOut": "Sign Out",
+  "guest": {
+    "headline": "Join The\nAdventure",
+    "sub": "Sign in to manage your bookings, save favourites and get personalised recommendations.",
+    "signIn": "Sign In",
+    "createAccount": "Create Account"
+  },
+  "language": {
+    "title": "Language",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "ru": "Русский"
+  },
+  "appInfo": "TT Tours · Hoi An, Vietnam · v1.0.0"
+}

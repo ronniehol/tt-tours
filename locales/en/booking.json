@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "Book Tour",
+    "notFound": "Tour not found."
+  },
+  "steps": {
+    "details": "Details",
+    "review": "Review",
+    "payment": "Payment"
+  },
+  "form": {
+    "title": "Your Details",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone / WhatsApp",
+    "travelDate": "Travel Date",
+    "adults": "Adults",
+    "children": "Children (½ price)",
+    "specialRequests": "Special Requests (optional)",
+    "specialRequestsPlaceholder": "Dietary requirements, accessibility needs…",
+    "continueToReview": "Continue to Review"
+  },
+  "review": {
+    "title": "Review & Confirm",
+    "tour": "Tour",
+    "date": "Date",
+    "guests": "Guests",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "total": "Total",
+    "adults": "{{count}} adult",
+    "adults_plural": "{{count}} adults",
+    "children": "{{count}} child",
+    "children_plural": "{{count}} children",
+    "proceedToPayment": "Proceed to Payment",
+    "editDetails": "Edit Details"
+  },
+  "payment": {
+    "title": "Payment",
+    "sub": "Secure payment powered by Stripe. Your card details are never stored on our servers.",
+    "totalDue": "Total Due",
+    "pay": "Pay ${{amount}}",
+    "processing": "Processing…",
+    "secure": "🔒 256-bit SSL · Powered by Stripe",
+    "mobileFallback": "Mobile payment coming soon. Please complete your booking on web."
+  },
+  "confirmation": {
+    "title": "Booking\nConfirmed!",
+    "emailSent": "A confirmation email has been sent to {{email}}. We'll be in touch 24 hours before your tour with pickup details.",
+    "reference": "Booking Reference",
+    "tour": "Tour",
+    "date": "Travel Date",
+    "guests": "Guests",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "totalPaid": "Total Paid",
+    "adults": "{{count}} adult",
+    "adults_plural": "{{count}} adults",
+    "children": "{{count}} child",
+    "children_plural": "{{count}} children",
+    "whatNext": "What Happens Next",
+    "step1": "📧 Check your email for a full booking confirmation.",
+    "step2": "📞 We will call or WhatsApp you 24 hours before departure.",
+    "step3": "📍 Your guide will meet you at the agreed pickup point.",
+    "step4": "🌟 Enjoy your adventure — and please leave us a review!",
+    "backToHome": "Back to Home",
+    "bookAnother": "Book Another Tour",
+    "noBooking": "No booking to confirm. Head back to tours."
+  }
+}

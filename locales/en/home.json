@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "Vietnam · Central Region",
+    "headline1": "FEEL THE",
+    "headline2": "RUSH",
+    "headline3": "OF VIETNAM",
+    "sub": "Bold adventures through ancient temples, mountain cable cars, open-water diving and lantern-lit streets. This is Vietnam at full intensity.",
+    "cta1": "Explore Tours",
+    "cta2": "View Schedule"
+  },
+  "stats": {
+    "tours": "Tours",
+    "departures": "Departures",
+    "departures_value": "Daily",
+    "rated": "Rated"
+  },
+  "steps": {
+    "title1": "Choose Your Tour",
+    "sub1": "Browse 14+ experiences from temples to islands.",
+    "title2": "Pick a Date",
+    "sub2": "Daily departures, flexible scheduling.",
+    "title3": "Pay & Go",
+    "sub3": "Secure checkout, instant confirmation."
+  },
+  "featured": {
+    "eyebrow": "Our Experiences",
+    "title": "Choose Your\nAdventure",
+    "viewAll": "All 14 →"
+  },
+  "cta": {
+    "headline": "STOP WAITING.\nSTART EXPLORING.",
+    "sub": "Daily Departures · Small Groups · Expert Local Guides",
+    "button": "Book Your Adventure Now"
+  }
+}

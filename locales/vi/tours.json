@@ -1,0 +1,19 @@
+{
+  "header": {
+    "title": "Tất Cả Tour",
+    "count": "{{count}} tour"
+  },
+  "categories": {
+    "all": "Tất cả",
+    "cultural": "Văn hóa",
+    "adventure": "Phiêu lưu",
+    "water": "Biển",
+    "nature": "Thiên nhiên",
+    "food": "Ẩm thực"
+  },
+  "card": {
+    "fullDay": "Cả ngày",
+    "halfDay": "Nửa ngày",
+    "maxGroup": "Tối đa {{count}}"
+  }
+}

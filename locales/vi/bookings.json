@@ -1,0 +1,35 @@
+{
+  "header": "Đặt Chỗ Của Tôi",
+  "lookup": {
+    "title": "Tra cứu đặt chỗ",
+    "sub": "Nhập mã đặt chỗ (VD: TT-A1B2C3D4) để kiểm tra trạng thái.",
+    "placeholder": "TT-XXXXXXXX",
+    "button": "Tra cứu",
+    "notFound": "Không tìm thấy đặt chỗ với mã này. Vui lòng kiểm tra lại."
+  },
+  "status": {
+    "pending": "Chờ xác nhận",
+    "confirmed": "Đã xác nhận",
+    "cancelled": "Đã hủy",
+    "completed": "Đã hoàn thành"
+  },
+  "labels": {
+    "bookingReference": "Mã đặt chỗ",
+    "tour": "Tour",
+    "name": "Tên",
+    "email": "Email",
+    "date": "Ngày",
+    "guests": "Khách",
+    "total": "Tổng cộng",
+    "adults": "{{count}} người lớn",
+    "adults_plural": "{{count}} người lớn",
+    "children": "{{count}} trẻ em",
+    "children_plural": "{{count}} trẻ em"
+  },
+  "confirmedNote": "✓ Đặt chỗ của bạn đã được xác nhận. Chúng tôi sẽ liên hệ trước 24 giờ với thông tin đón khách.",
+  "promo": {
+    "title": "Lên kế hoạch\nchuyến phiêu lưu tiếp theo",
+    "sub": "14 tour · Xuất phát hàng ngày",
+    "button": "Xem Tour"
+  }
+}

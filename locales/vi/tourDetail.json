@@ -1,0 +1,26 @@
+{
+  "labels": {
+    "fullDay": "Cả ngày",
+    "halfDay": "Nửa ngày",
+    "departure": "Xuất phát",
+    "maxGroup": "Tối đa {{count}}",
+    "duration": "Thời gian",
+    "from": "Từ",
+    "perPerson": "mỗi người",
+    "meetingPoint": "Điểm hẹn"
+  },
+  "sections": {
+    "about": "Giới Thiệu Tour",
+    "highlights": "Điểm Nổi Bật",
+    "whatsIncluded": "Bao Gồm Gì",
+    "included": "✓ Đã bao gồm",
+    "notIncluded": "✗ Không bao gồm",
+    "meetingPoint": "Điểm Hẹn"
+  },
+  "cta": {
+    "book": "Đặt Tour Này",
+    "bookNow": "Đặt Ngay",
+    "notFound": "Không tìm thấy tour.",
+    "backToTours": "Quay lại danh sách"
+  }
+}

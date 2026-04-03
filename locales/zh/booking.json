@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "预订旅游",
+    "notFound": "未找到旅游。"
+  },
+  "steps": {
+    "details": "填写信息",
+    "review": "确认详情",
+    "payment": "支付"
+  },
+  "form": {
+    "title": "您的信息",
+    "fullName": "姓名",
+    "email": "电子邮件",
+    "phone": "电话 / WhatsApp",
+    "travelDate": "出行日期",
+    "adults": "成人",
+    "children": "儿童（半价）",
+    "specialRequests": "特殊要求（可选）",
+    "specialRequestsPlaceholder": "饮食要求、无障碍需求…",
+    "continueToReview": "继续确认"
+  },
+  "review": {
+    "title": "确认并提交",
+    "tour": "旅游",
+    "date": "日期",
+    "guests": "游客",
+    "name": "姓名",
+    "email": "邮箱",
+    "phone": "电话",
+    "total": "总计",
+    "adults": "{{count}} 名成人",
+    "adults_plural": "{{count}} 名成人",
+    "children": "{{count}} 名儿童",
+    "children_plural": "{{count}} 名儿童",
+    "proceedToPayment": "前往支付",
+    "editDetails": "修改信息"
+  },
+  "payment": {
+    "title": "支付",
+    "sub": "由 Stripe 提供安全支付。您的卡片信息不会存储在我们的服务器上。",
+    "totalDue": "应付总额",
+    "pay": "支付 ${{amount}}",
+    "processing": "处理中…",
+    "secure": "🔒 256位SSL · 由Stripe提供支持",
+    "mobileFallback": "移动支付即将推出。请在网页上完成预订。"
+  },
+  "confirmation": {
+    "title": "预订\n成功！",
+    "emailSent": "确认邮件已发送至 {{email}}。我们将在出发前24小时与您联系。",
+    "reference": "预订编号",
+    "tour": "旅游",
+    "date": "出行日期",
+    "guests": "游客",
+    "name": "姓名",
+    "email": "邮箱",
+    "phone": "电话",
+    "totalPaid": "已付总额",
+    "adults": "{{count}} 名成人",
+    "adults_plural": "{{count}} 名成人",
+    "children": "{{count}} 名儿童",
+    "children_plural": "{{count}} 名儿童",
+    "whatNext": "接下来",
+    "step1": "📧 查收邮件获取完整预订确认。",
+    "step2": "📞 我们将在出发前24小时致电或WhatsApp。",
+    "step3": "📍 导游将在约定地点接您。",
+    "step4": "🌟 享受旅程——欢迎留下评价！",
+    "backToHome": "返回首页",
+    "bookAnother": "再订一个旅游",
+    "noBooking": "没有待确认的预订。返回旅游列表。"
+  }
+}

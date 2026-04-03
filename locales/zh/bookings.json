@@ -1,0 +1,35 @@
+{
+  "header": "我的预订",
+  "lookup": {
+    "title": "查询预订",
+    "sub": "输入预订编号（如 TT-A1B2C3D4）查看状态。",
+    "placeholder": "TT-XXXXXXXX",
+    "button": "查询",
+    "notFound": "未找到该编号的预订，请检查后重试。"
+  },
+  "status": {
+    "pending": "待确认",
+    "confirmed": "已确认",
+    "cancelled": "已取消",
+    "completed": "已完成"
+  },
+  "labels": {
+    "bookingReference": "预订编号",
+    "tour": "旅游",
+    "name": "姓名",
+    "email": "邮箱",
+    "date": "日期",
+    "guests": "游客",
+    "total": "总计",
+    "adults": "{{count}} 名成人",
+    "adults_plural": "{{count}} 名成人",
+    "children": "{{count}} 名儿童",
+    "children_plural": "{{count}} 名儿童"
+  },
+  "confirmedNote": "✓ 您的预订已确认。我们将在出发前24小时联系您提供接送详情。",
+  "promo": {
+    "title": "规划你的\n下一次冒险",
+    "sub": "14条线路 · 每天出发",
+    "button": "浏览旅游"
+  }
+}

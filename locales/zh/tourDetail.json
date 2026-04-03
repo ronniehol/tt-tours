@@ -1,0 +1,26 @@
+{
+  "labels": {
+    "fullDay": "全天",
+    "halfDay": "半天",
+    "departure": "出发时间",
+    "maxGroup": "最多 {{count}} 人",
+    "duration": "时长",
+    "from": "起价",
+    "perPerson": "每人",
+    "meetingPoint": "集合地点"
+  },
+  "sections": {
+    "about": "关于本次旅游",
+    "highlights": "亮点",
+    "whatsIncluded": "包含内容",
+    "included": "✓ 已包含",
+    "notIncluded": "✗ 不包含",
+    "meetingPoint": "集合地点"
+  },
+  "cta": {
+    "book": "预订本次旅游",
+    "bookNow": "立即预订",
+    "notFound": "未找到旅游。",
+    "backToTours": "返回旅游列表"
+  }
+}

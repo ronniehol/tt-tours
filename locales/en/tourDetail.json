@@ -1,0 +1,26 @@
+{
+  "labels": {
+    "fullDay": "Full Day",
+    "halfDay": "Half Day",
+    "departure": "Departure",
+    "maxGroup": "Max {{count}}",
+    "duration": "Duration",
+    "from": "From",
+    "perPerson": "per person",
+    "meetingPoint": "Meeting Point"
+  },
+  "sections": {
+    "about": "About This Tour",
+    "highlights": "Highlights",
+    "whatsIncluded": "What's Included",
+    "included": "✓ Included",
+    "notIncluded": "✗ Not Included",
+    "meetingPoint": "Meeting Point"
+  },
+  "cta": {
+    "book": "Book This Tour",
+    "bookNow": "Book Now",
+    "notFound": "Tour not found.",
+    "backToTours": "Back to Tours"
+  }
+}

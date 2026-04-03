@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "越南会安",
+    "headline1": "探索",
+    "headline2": "会安",
+    "headline3": "与我们同行",
+    "sub": "从古镇到占婆岛的精品套餐游——每天出发。",
+    "cta1": "浏览旅游",
+    "cta2": "了解更多"
+  },
+  "stats": {
+    "tours": "条线路",
+    "departures": "出发",
+    "departures_value": "每天",
+    "rated": "星级评价"
+  },
+  "steps": {
+    "title1": "选择旅游",
+    "sub1": "浏览14条精心策划的旅游线路。",
+    "title2": "轻松预订",
+    "sub2": "填写信息并安全在线支付。",
+    "title3": "享受冒险",
+    "sub3": "导游接您并开始冒险之旅！"
+  },
+  "featured": {
+    "eyebrow": "精选",
+    "title": "热门旅游",
+    "viewAll": "查看全部 →"
+  },
+  "cta": {
+    "headline": "准备好冒险了吗？",
+    "sub": "立即预订 · 每天出发",
+    "button": "查看全部旅游"
+  }
+}
