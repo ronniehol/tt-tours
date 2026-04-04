@@ -41,7 +41,7 @@
     "title": "Payment",
     "sub": "Secure payment powered by Stripe. Your card details are never stored on our servers.",
     "totalDue": "Total Due",
-    "pay": "Pay ${{amount}}",
+    "pay": "Pay {{amount}}",
     "processing": "Processing…",
     "secure": "🔒 256-bit SSL · Powered by Stripe",
     "mobileFallback": "Mobile payment coming soon. Please complete your booking on web."

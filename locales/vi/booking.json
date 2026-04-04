@@ -41,7 +41,7 @@
     "title": "Thanh Toán",
     "sub": "Thanh toán an toàn qua Stripe. Thông tin thẻ không được lưu trên máy chủ của chúng tôi.",
     "totalDue": "Tổng thanh toán",
-    "pay": "Thanh toán ${{amount}}",
+    "pay": "Thanh toán {{amount}}",
     "processing": "Đang xử lý…",
     "secure": "🔒 SSL 256-bit · Powered by Stripe",
     "mobileFallback": "Thanh toán di động sắp ra mắt. Vui lòng hoàn tất đặt chỗ trên web."
