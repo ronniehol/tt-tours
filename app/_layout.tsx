@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { Platform } from 'react-native';
 import {
   useFonts,
   BarlowCondensed_400Regular,
@@ -43,6 +44,16 @@ export default function RootLayout() {
     SpaceGrotesk_600SemiBold,
     SpaceGrotesk_700Bold,
   });
+
+  // Inject SVG favicon on web
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/svg+xml';
+    link.href = '/favicon.svg';
+    document.head.appendChild(link);
+  }, []);
 
   // Listen for Supabase auth state changes
   useEffect(() => {
