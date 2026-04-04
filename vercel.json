@@ -1,5 +1,8 @@
 {
   "buildCommand": "npm run build:web",
   "outputDirectory": "dist",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/(.*\\.(?:svg|png|ico|jpg|jpeg|gif|webp|woff|woff2|ttf|js|css|json|map))", "destination": "/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
